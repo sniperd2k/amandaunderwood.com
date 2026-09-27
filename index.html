@@ -1,6 +1,602 @@
-<html>
-	<head><title>Amanda Underwood</title></head>
-	<body>
-		My <a href="AmandaUnderwoodResume.pdf">resume</a>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Amanda Underwood · NH 48 &amp; the Outdoors</title>
+  <meta name="description" content="Amanda Underwood — hiker, outdoors lover, and New Hampshire 4000-footer enthusiast. Summit postcards, trails, and a little mountain magic." />
+  <meta name="theme-color" content="#1a2e24" />
+  <link rel="canonical" href="https://amandaunderwood.com/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://amandaunderwood.com/" />
+  <meta property="og:title" content="Amanda Underwood · NH 48 &amp; the Outdoors" />
+  <meta property="og:description" content="Hiker, outdoors lover, and New Hampshire 4000-footer enthusiast." />
+  <meta property="og:image" content="https://amandaunderwood.com/assets/hero-og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Amanda Underwood · NH 48 &amp; the Outdoors" />
+  <meta name="twitter:description" content="Hiker, outdoors lover, and New Hampshire 4000-footer enthusiast." />
+  <meta name="twitter:image" content="https://amandaunderwood.com/assets/hero-og.jpg" />
+
+  <!--
+    Hero photo: Unsplash T7ja179JZn8 (photo-1710678088868-134981fd597a)
+    https://unsplash.com/photos/a-view-of-the-mountains-from-the-top-of-a-hill-T7ja179JZn8
+    License: Unsplash License — courtesy attribution in footer.
+  -->
+
+  <link rel="preload" as="image" type="image/webp" href="/assets/hero-720.webp" imagesrcset="/assets/hero-720.webp 720w, /assets/hero-800.webp 800w, /assets/hero-1600.webp 1600w" imagesizes="100vw" fetchpriority="high" />
+
+  <style>
+    :root {
+      --pine: #1a2e24;
+      --pine-mid: #2a4a3a;
+      --moss: #4a7c59;
+      --trail: #c4a574;
+      --frost: #e8f0eb;
+      --snow: #f7faf8;
+      --ink: #0f1a14;
+      --muted: #5a6e62;
+      --card: rgba(247, 250, 248, 0.92);
+      --shadow: 0 12px 40px rgba(15, 26, 20, 0.18);
+      --radius: 1rem;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --max: 68rem;
+      --touch: 44px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--snow);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--moss); }
+    a:focus-visible, button:focus-visible, .btn:focus-visible {
+      outline: 3px solid var(--trail);
+      outline-offset: 3px;
+    }
+
+    .skip {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--pine);
+      color: var(--snow);
+      padding: 0.75rem 1rem;
+      z-index: 100;
+      border-radius: 0 0 0.5rem 0;
+    }
+    .skip:focus { left: 0; }
+
+    /* —— Header —— */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(26, 46, 36, 0.88);
+      border-bottom: 1px solid rgba(196, 165, 116, 0.25);
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0.65rem 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      color: var(--frost);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      font-size: 1.05rem;
+      min-height: var(--touch);
+      display: inline-flex;
+      align-items: center;
+    }
+    .logo span { color: var(--trail); font-weight: 500; margin-left: 0.35rem; font-size: 0.85rem; }
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      color: var(--frost);
+      text-decoration: none;
+      padding: 0.65rem 0.85rem;
+      min-height: var(--touch);
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: background 0.2s var(--ease);
+    }
+    .nav-links a:hover { background: rgba(247, 250, 248, 0.12); }
+
+    /* —— Hero —— */
+    .hero {
+      position: relative;
+      min-height: min(92vh, 52rem);
+      display: grid;
+      align-items: end;
+      color: var(--snow);
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+    }
+    .hero-media picture, .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(180deg, rgba(15, 26, 20, 0.35) 0%, rgba(15, 26, 20, 0.15) 35%, rgba(15, 26, 20, 0.55) 70%, rgba(15, 26, 20, 0.92) 100%);
+    }
+    .hero-content {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 4.5rem 1.25rem 3rem;
+      width: 100%;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(74, 124, 89, 0.45);
+      border: 1px solid rgba(196, 165, 116, 0.45);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      animation: rise 0.8s var(--ease) both;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: var(--trail);
+      box-shadow: 0 0 0 3px rgba(196, 165, 116, 0.35);
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 8vw, 4.25rem);
+      line-height: 1.05;
+      margin: 0 0 0.75rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+      animation: rise 0.9s var(--ease) 0.05s both;
+    }
+    .hero-lead {
+      max-width: 34rem;
+      font-size: clamp(1.05rem, 2.8vw, 1.3rem);
+      color: var(--frost);
+      margin: 0 0 1.75rem;
+      opacity: 0.95;
+      animation: rise 1s var(--ease) 0.1s both;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      animation: rise 1.05s var(--ease) 0.15s both;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: var(--touch);
+      padding: 0.75rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 650;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: transform 0.2s var(--ease), background 0.2s, border-color 0.2s, color 0.2s;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary {
+      background: var(--trail);
+      color: var(--pine);
+      border-color: var(--trail);
+    }
+    .btn-primary:hover { background: #d4b88a; }
+    .btn-ghost {
+      background: rgba(247, 250, 248, 0.1);
+      color: var(--snow);
+      border-color: rgba(247, 250, 248, 0.45);
+    }
+    .btn-ghost:hover { background: rgba(247, 250, 248, 0.2); }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(1rem); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* —— Sections —— */
+    main { background: var(--snow); }
+    .section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 3.25rem 1.25rem;
+    }
+    .section h2 {
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
+      margin: 0 0 0.5rem;
+      color: var(--pine);
+      letter-spacing: -0.01em;
+    }
+    .section-lede {
+      color: var(--muted);
+      max-width: 40rem;
+      margin: 0 0 1.75rem;
+      font-size: 1.05rem;
+    }
+
+    .about-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 720px) {
+      .about-grid { grid-template-columns: 1.2fr 1fr; align-items: start; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(26, 46, 36, 0.08);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      box-shadow: var(--shadow);
+    }
+    .card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.15rem;
+      color: var(--pine-mid);
+    }
+    .card p { margin: 0 0 0.85rem; color: var(--ink); }
+    .card p:last-child { margin-bottom: 0; }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+    .stat {
+      text-align: center;
+      padding: 0.85rem 0.4rem;
+      border-radius: 0.75rem;
+      background: linear-gradient(160deg, var(--pine) 0%, var(--pine-mid) 100%);
+      color: var(--frost);
+    }
+    .stat strong {
+      display: block;
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 800;
+      color: var(--trail);
+      line-height: 1.1;
+    }
+    .stat span {
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.75rem !important;
+    }
+
+    /* —— Postcard peaks —— */
+    .peaks {
+      display: grid;
+      gap: 0.85rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 560px) {
+      .peaks { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .peaks { grid-template-columns: repeat(3, 1fr); }
+    }
+    .postcard {
+      position: relative;
+      border-radius: var(--radius);
+      padding: 1.15rem 1.2rem 1.25rem;
+      background: #fffef9;
+      border: 1px solid rgba(196, 165, 116, 0.45);
+      box-shadow: 0 6px 20px rgba(15, 26, 20, 0.08);
+      overflow: hidden;
+      min-height: 8.5rem;
+      transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+    }
+    .postcard:hover {
+      transform: translateY(-3px) rotate(-0.4deg);
+      box-shadow: 0 14px 28px rgba(15, 26, 20, 0.12);
+    }
+    .postcard::after {
+      content: "";
+      position: absolute;
+      top: 0.7rem;
+      right: 0.7rem;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #fff 0%, #e8dcc8 55%, #c4a574 100%);
+      opacity: 0.85;
+      border: 1px dashed rgba(26, 46, 36, 0.25);
+    }
+    .postcard .elev {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--moss);
+      margin: 0 0 0.35rem;
+    }
+    .postcard h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.2rem;
+      color: var(--pine);
+      padding-right: 2.5rem;
+    }
+    .postcard p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+      max-width: 16rem;
+    }
+    .tag {
+      display: inline-block;
+      margin-top: 0.7rem;
+      font-size: 0.72rem;
+      font-weight: 650;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(74, 124, 89, 0.12);
+      color: var(--pine-mid);
+    }
+
+    /* —— Trail ribbon —— */
+    .trail-band {
+      background: linear-gradient(120deg, var(--pine) 0%, var(--pine-mid) 50%, #1e3d30 100%);
+      color: var(--frost);
+      padding: 2.5rem 1.25rem;
+    }
+    .trail-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      gap: 1.25rem;
+    }
+    @media (min-width: 720px) {
+      .trail-inner { grid-template-columns: 1.4fr auto; align-items: center; }
+    }
+    .trail-band h2 { color: var(--snow); margin: 0 0 0.5rem; }
+    .trail-band p { margin: 0; opacity: 0.92; max-width: 36rem; }
+    .trail-band .btn-primary { justify-self: start; }
+
+    /* —— Footer —— */
+    .site-footer {
+      background: var(--ink);
+      color: #a8b8ae;
+      padding: 2rem 1.25rem 2.5rem;
+      font-size: 0.9rem;
+    }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+    .site-footer a { color: var(--trail); }
+    .site-footer small { display: block; margin-top: 0.35rem; opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="logo" href="/">Amanda Underwood <span>· NH trails</span></a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#peaks">Peaks</a></li>
+          <li><a href="AmandaUnderwoodResume.pdf">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Welcome">
+    <div class="hero-media">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="/assets/hero-720.webp 720w, /assets/hero-800.webp 800w, /assets/hero-1600.webp 1600w"
+          sizes="100vw" />
+        <img
+          src="/assets/hero-800.jpg"
+          srcset="/assets/hero-720.jpg 720w, /assets/hero-800.jpg 800w, /assets/hero-1600.jpg 1600w"
+          sizes="100vw"
+          width="1600"
+          height="1067"
+          alt="Frosted alpine summit overlooking layered blue mountain ridges in the White Mountains"
+          decoding="async"
+          fetchpriority="high" />
+      </picture>
+    </div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="eyebrow">White Mountains · NH 48</p>
+      <h1>Where the ridgeline meets the sky.</h1>
+      <p class="hero-lead">
+        Hi — I’m Amanda. I chase sunrise summits, muddy boots, and the quiet magic of New Hampshire’s 4000-footers.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#peaks">Favorite peaks</a>
+        <a class="btn btn-ghost" href="#about">About Amanda</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">Trail notes</h2>
+      <p class="section-lede">
+        A simple home base for hiking memories, outdoors adventures, and the long road toward (and beyond) the NH 48.
+      </p>
+      <div class="about-grid">
+        <article class="card">
+          <h3>Outdoors first</h3>
+          <p>
+            From Franconia Ridge breezes to Presidential rime ice, the White Mountains are my happy place.
+            This site is a postcard from the trailhead — polished enough for a phone on airplane mode, warm enough for a camp mug.
+          </p>
+          <p>
+            Looking for the résumé version of the story?
+            <a href="AmandaUnderwoodResume.pdf">Grab the PDF</a>.
+          </p>
+        </article>
+        <aside class="card" aria-labelledby="progress-heading">
+          <h3 id="progress-heading">NH 48 progress tease</h3>
+          <p>Illustrative placeholder — not a claimed official count.</p>
+          <div class="stat-row" role="group" aria-label="Illustrative hiking stats">
+            <div class="stat">
+              <strong>—</strong>
+              <span>Summited</span>
+            </div>
+            <div class="stat">
+              <strong>48</strong>
+              <span>On the list</span>
+            </div>
+            <div class="stat">
+              <strong>∞</strong>
+              <span>Views left</span>
+            </div>
+          </div>
+          <p class="note">Peak count coming soon. For now: lace up, pack layers, check the weather.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="peaks" aria-labelledby="peaks-heading">
+      <h2 id="peaks-heading">Summit postcards</h2>
+      <p class="section-lede">
+        A handful of favorite White Mountain peaks — illustrative picks, not a completion log.
+      </p>
+      <div class="peaks">
+        <article class="postcard">
+          <p class="elev">4,802 ft</p>
+          <h3>Mount Moosilauke</h3>
+          <p>Wide alpine meadows and a summit that feels like the roof of Grafton County.</p>
+          <span class="tag">Favorite</span>
+        </article>
+        <article class="postcard">
+          <p class="elev">5,249 ft</p>
+          <h3>Lafayette</h3>
+          <p>Franconia Ridge drama — knife-edge views when the clouds cooperate.</p>
+          <span class="tag">Ridge day</span>
+        </article>
+        <article class="postcard">
+          <p class="elev">6,288 ft</p>
+          <h3>Mount Washington</h3>
+          <p>Home of the world’s worst weather — and some of the best bragging rights.</p>
+          <span class="tag">Classic</span>
+        </article>
+        <article class="postcard">
+          <p class="elev">4,310 ft</p>
+          <h3>Mount Pierce</h3>
+          <p>Presidential Range gateway with friendly grades and big-sky payoffs.</p>
+          <span class="tag">Early season</span>
+        </article>
+        <article class="postcard">
+          <p class="elev">4,902 ft</p>
+          <h3>South Twin</h3>
+          <p>Bondcliff vistas without the full Bonds traverse — when timing is right.</p>
+          <span class="tag">Twins</span>
+        </article>
+        <article class="postcard">
+          <p class="elev">4,700 ft</p>
+          <h3>Mount Carrigain</h3>
+          <p>Fire-tower panorama of almost everything that matters out here.</p>
+          <span class="tag">Viewpoint</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="trail-band" aria-labelledby="cta-heading">
+      <div class="trail-inner">
+        <div>
+          <h2 id="cta-heading">See you on the trail</h2>
+          <p>
+            More summit stories, gear notes, and NH 48 updates will land here.
+            Until then — hydrate, respect Leave No Trace, and enjoy the climb.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="AmandaUnderwoodResume.pdf">View resume (PDF)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong style="color: var(--frost);">Amanda Underwood</strong>
+        <small>amandaunderwood.com · White Mountains, New Hampshire</small>
+      </div>
+      <p>
+        Hero photo via
+        <a href="https://unsplash.com/photos/a-view-of-the-mountains-from-the-top-of-a-hill-T7ja179JZn8" rel="noopener noreferrer">Unsplash</a>
+        (photo-1710678088868) under the
+        <a href="https://unsplash.com/license" rel="noopener noreferrer">Unsplash License</a>.
+        Optimized copies hosted locally.
+      </p>
+      <small>© <span id="y"></span> Amanda Underwood. Built for phones first — Chrome &amp; Safari friendly.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>

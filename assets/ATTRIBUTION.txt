@@ -1,0 +1,7 @@
+Hero background image
+---------------------
+Source: Unsplash
+Photo page: https://unsplash.com/photos/a-view-of-the-mountains-from-the-top-of-a-hill-T7ja179JZn8
+CDN id: photo-1710678088868-134981fd597a
+License: Unsplash License (https://unsplash.com/license) — free to use; attribution not required, courtesy credit given in site footer.
+Downloaded and optimized locally (WebP/JPEG variants) — not hotlinked.
