@@ -1,7 +1,51 @@
-Hero background image
----------------------
-Source: Unsplash
-Photo page: https://unsplash.com/photos/a-view-of-the-mountains-from-the-top-of-a-hill-T7ja179JZn8
-CDN id: photo-1710678088868-134981fd597a
-License: Unsplash License (https://unsplash.com/license) — free to use; attribution not required, courtesy credit given in site footer.
-Downloaded and optimized locally (WebP/JPEG variants) — not hotlinked.
+Polaroid / background images (Unsplash License)
+================================================
+License: https://unsplash.com/license — free to use; attribution not required.
+Optimized WebP/JPEG copies hosted locally (not hotlinked).
+
+1. Vintage stage microphone
+   CDN: photo-1511671782779-c97d3d27a1d4
+   https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4
+   Asset: polaroid-1.*
+
+2. Live performer on stage
+   CDN: photo-1493225457124-a3eb161ffa5f
+   https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f
+   Asset: polaroid-2.*
+
+3. Acoustic guitar hands (folk close-up)
+   CDN: photo-1510915361894-db8b60106cb1
+   Photographer (courtesy): Jefferson Santos (@jefflssantos)
+   https://unsplash.com/photos/person-playing-guitar-fCEJGBzAkrU
+   Asset: polaroid-3.*
+
+4. Concert crowd, warm stage lights
+   CDN: photo-1524368535928-5b5e00ddc76b
+   https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b
+   Asset: polaroid-4.*  (+ bg-wash.*)
+
+5. Audience heart-hands at a show
+   CDN: photo-1429962714451-bb934ecdc4ec
+   https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec
+   Asset: polaroid-5.*
+
+6. Home studio with acoustic guitars
+   CDN: photo-1511379938547-c1f69419868d
+   https://images.unsplash.com/photo-1511379938547-c1f69419868d
+   Asset: polaroid-6.*
+
+7. Drum kit, warm venue light
+   CDN: photo-1519892300165-cb5542fb47c7
+   https://images.unsplash.com/photo-1519892300165-cb5542fb47c7
+   Asset: polaroid-7.*
+
+8. Fiddle on wooden floor (OG image source)
+   CDN: photo-1460036521480-ff49c08c2781
+   https://images.unsplash.com/photo-1460036521480-ff49c08c2781
+   Asset: polaroid-8.* , og.*
+
+Tour-date destinations (official artist sites; not owned by this site)
+---------------------------------------------------------------------
+- Drew Holcomb & the Neighbors: https://drewholcomb.com/pages/tour
+- Leftover Salmon: https://www.leftoversalmon.com/tour
+- Breakfield (formerly Boy Named Banjo): https://breakfieldband.com/#tour
