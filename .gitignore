@@ -1,0 +1,5 @@
+aspnet_client/
+*.bak
+test.txt
+Thumbs.db
+.DS_Store
